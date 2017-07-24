@@ -112,7 +112,7 @@ describe("BinTestCases", function() {
 
 							child.on("close", function(code) {
 								env.code = code;
-								done();
+								setTimeout(done, 1000); // wait a second for stdout/stderr
 							});
 
 							child.on("error", function(error) {
